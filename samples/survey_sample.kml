@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Drone Flight Survey Site</name>
+    <description>Sample geospatial dataset containing agricultural boundaries and flight path</description>
+    
+    <!-- Farm Boundary Polygon -->
+    <Placemark>
+      <name>Survey Area Alpha</name>
+      <description>Agricultural Farm Boundary for Drone Inspection</description>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              77.5900,12.9700,0
+              77.5950,12.9700,0
+              77.5950,12.9750,0
+              77.5900,12.9750,0
+              77.5900,12.9700,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- Drone Flight Path LineString -->
+    <Placemark>
+      <name>Mission Flight Path 01</name>
+      <description>Drone corridor flight survey transect</description>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+          77.5905,12.9705,50
+          77.5925,12.9725,50
+          77.5945,12.9745,50
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- Ground Control Point (GCP) -->
+    <Placemark>
+      <name>GCP Waypoint Base</name>
+      <description>Calibration benchmark base station</description>
+      <Point>
+        <coordinates>77.5910,12.9710,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
